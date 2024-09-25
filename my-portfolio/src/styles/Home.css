@@ -1,0 +1,129 @@
+/* In Home.css */
+
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: transparent;
+    text-align: center;
+    min-height: 100vh;
+  }
+  
+  .intro-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;
+  }
+  
+  .intro, .image-gif {
+    flex: 1 1 50%; /* Explicit flexbox behavior */
+    padding: 20px;
+  }
+  
+  .intro {
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .intro-text {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  .homepage-image {
+  width: 450px; /* Adjust the size of the GIF */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+  .name {
+    font-size: 3.5rem;
+  }
+  
+  .highlight {
+    color: #b26bff;
+    font-weight: bold;
+  }
+  
+  .role {
+    font-size: 1.8rem;
+    min-height: 2.2em;
+  }
+  
+  .cursor {
+    animation: blink 0.7s infinite;
+  }
+  
+  .wave {
+    display: inline-block;
+    animation: wave 2s infinite;
+  }
+  
+  .social-links {
+    margin-top: 30px;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .social-links a {
+    cursor: pointer;
+    color: #fff; /* Set the default color */
+    font-size: 24px; /* Adjust size as needed */
+    margin: 0 10px; /* Add some space between icons */
+    z-index: 1001; /* Ensures links are clickable */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .social-links a:hover {
+    color: #b26bff; /* Change color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+  }
+  
+  .cta-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #b26bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1000;
+    pointer-events: auto;
+  }
+  
+  
+  .cta-button:hover {
+    background-color: #9f4eff;
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
+  @keyframes wave {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
