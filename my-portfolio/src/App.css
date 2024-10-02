@@ -5,6 +5,6 @@
   }
   
   main {
-    flex: 1;
-    padding-top: var(--header-height);
+    padding: 80px 0 40px; /* Adjust the bottom padding to match your new footer height */
+    min-height: calc(100vh - 120px); /* Adjust this value based on your new header and footer heights */
   }

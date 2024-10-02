@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import project2Image from '../assets/Project2.png';
 import project1Image from '../assets/Project1.png';
+import project3Image from '../assets/Project3.png';
 import '../styles/Projects.css';
 
 const ProjectCard = ({ title, description, technologies, repoUrl, image }) => (
@@ -36,17 +37,17 @@ const Projects = () => {
     },
     {
       title: "Handwritten-Recognition Application",
-      description: "This ia a project required us to design and implement a application that recognizes handwritten digits and English letters. This application was bulit as the Project 1 for COMPSYS 302 of University of Auckland.",
-      technologies: ["Python", "PyQt5", "Pytorch", "NumPy","OpenCV", "PIL"],
+      description: "This ia a project required us to design and implement a application that recognizes handwritten digits and English letters. This application used EMNIST dataset to train the model and predict the handwritten digit based on the model.",
+      technologies: ["Python", "PyQt5", "Pytorch", "NumPy","OpenCV", "PIL","Git"],
       repoUrl: "https://github.com/kylehe77/Handwritten-Recognition",
       image: project2Image
     },
     {
-      title: "Handwritten-Recognition Application",
-      description: "This ia a project required us to design and implement a application that recognizes handwritten digits and English letters. This application was bulit as the Project 1 for COMPSYS 302 of University of Auckland.",
-      technologies: ["Python", "PyQt5", "Pytorch", "NumPy","OpenCV", "PIL"],
-      repoUrl: "https://github.com/kylehe77/Handwritten-Recognition",
-      image: project2Image
+      title: "Android Mobile Application",
+      description: "This project was built by using Java and Android Studio. This application was designed to be a vechiles display system which is able to show information about vehicles.",
+      technologies: ["Java", "Android Studio", "UI/UX Design"],
+      repoUrl: "https://github.com/kylehe77/Android-mobile-app",
+      image: project3Image
     },
     
     // Add more projects here

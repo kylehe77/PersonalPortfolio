@@ -1,19 +1,28 @@
 import React from 'react';
+import '../styles/Resume.css';
+import resumePdf from '../assets/Tianhua_HE_Resume.pdf';
 
-
-const Skills = () => {
-  const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Git'];
-
+const Resume = ({ pdfUrl }) => {
   return (
-    <section id="skills" className="container">
-      <h2>My Skills</h2>
-      <ul className="skills-list">
-        {skills.map((skill, index) => (
-          <li key={index}>{skill}</li>
-        ))}
-      </ul>
-    </section>
+    <div className="resume-container">
+      <h2>My Resume</h2>
+      <div className="pdf-embed">
+        <iframe
+          src={resumePdf}
+          title="My Resume"
+          width="100%"
+          height="600"
+        ></iframe>
+      </div>
+      <div className="download-link">
+        <a href={resumePdf} download className="download-button">
+          <span className="download-icon">&#8595;</span>
+          Download Resume
+        </a>
+      </div>
+    </div>
   );
 };
 
-export default Skills;
+
+export default Resume;

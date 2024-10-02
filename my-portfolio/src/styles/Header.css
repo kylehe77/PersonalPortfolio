@@ -1,144 +1,130 @@
 /* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body background styling */
+body {
+  background-color: #0b0b45;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
 
 /* Header Styling */
 header {
-    background: transparent;
-    padding: 20px 0;
-    width: 100%;
-    position: fixed; /* Change to fixed */
-    top: 0; /* Add this */
-    left: 0; /* Add this */
-    z-index: 10;
+  background-color: #221b70; /* Changed from transparent to match container */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-/* Add this to ensure content doesn't hide behind the header */
-main {
-    padding-top: 100px; /* Adjust this value to match your header height */
+/* Container */
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Added horizontal padding */
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body background styling similar to the image */
-  body {
-    background-color: #0b0b45;
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-  }
-  
-  /* Header Styling */
-  header {
-    background: transparent;
-    padding: 20px 0;
-    width: 100%;
-    position: relative;
-    z-index: 10;
-  }
-  
-  /* Container */
+/* Logo Styling */
+#logo {
+  font-size: 1.5rem; /* Slightly reduced size */
+  font-family: monospace;
+  color: #b26bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: fadeInLogo 2s ease-in-out forwards;
+}
+
+/* Navigation styling */
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 12px; /* Slightly reduced padding */
+  border-radius: 8px; /* Slightly reduced border-radius */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #b26bff;
+  color: #0b0b45;
+}
+
+/* Animations */
+@keyframes fadeInLogo {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    padding: 10px;
   }
-  
-  /* Logo Styling */
-  #logo {
-    font-size: 2rem;
-    font-family: monospace;
-    color: #b26bff;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: fadeInLogo 2s ease-in-out forwards;
-  }
-  
-  /* Navigation styling */
+
   nav ul {
-    display: flex;
-    list-style: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
   }
-  
+
   nav ul li {
-    margin-left: 20px;
+    margin: 5px 10px;
   }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  nav ul li a:hover {
-    background-color: #b26bff;
-    color: #0b0b45;
-  }
-  
-  /* Animations */
-  @keyframes fadeInLogo {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-    }
-  
-    nav ul li {
-      margin: 10px 0;
-    }
-  }
-  
-  /* Background animation - for stars and cosmic effect */
-  body::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
-  }
-  
-  body::after {
-    content: '';
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(178,107,255,0.6) 0%, rgba(178,107,255,0) 80%);
-    top: 40%;
-    right: 10%;
-    transform: translateY(-50%);
-    animation: glow 6s ease-in-out infinite;
-  }
-  
-  @keyframes glow {
-    0% {
-      transform: translateY(-50%) scale(1);
-    }
-    50% {
-      transform: translateY(-50%) scale(1.05);
-    }
-    100% {
-      transform: translateY(-50%) scale(1);
-    }
-  }
-  
+}
+
+/* Ensure content doesn't hide behind the header */
+main {
+  padding-top: 60px; /* Adjust this value to match your header height */
+}
+
+/* Background animation - for stars and cosmic effect */
+body::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(178,107,255,0.6) 0%, rgba(178,107,255,0) 80%);
+  top: 40%;
+  right: 10%;
+  transform: translateY(-50%);
+  animation: glow 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0%, 100% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-50%) scale(1.05); }
+}
